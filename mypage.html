@@ -12,3 +12,9 @@
 
 </body>
 </html>git config --list
+
+
+
+The MSMQ job went into error due to deadlock reason, database disconnection, and DB failover, which are common reasons for MSMQ job failures. 
+To reprocess these jobs, we run a data-fix script. We also have a SP scheduled to reprocess the jobs automatically without manual intervention, 
+but due to a bug in the scheduler SP it is currently disabled. In the future, we plan to handle such cases through the scheduler.
